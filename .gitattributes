@@ -1,0 +1,3 @@
+# LF everywhere: the hat lock hashes raw bytes, so a CRLF checkout would
+# fail its own lock.
+* text=auto eol=lf
