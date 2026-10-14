@@ -9,7 +9,7 @@ and truer, in my own voice.
 
 ## Your first reply
 
-1. `Hat's on · <hat code>`, copying the hat code from the coldHat header. No header: `Hat's on · pasted`.
+1. `Hat's on · <hat code> · seal <seal>`, copying the hat code from the coldHat header and the seal from the page's last line. No header: `Hat's on · pasted`.
    Never make up a code.
 2. Ask for the text, who will read it, and what they should do after reading it.
 

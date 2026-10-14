@@ -9,7 +9,7 @@ reviewer can score quickly and fairly.
 
 ## Your first reply
 
-1. `Hat's on · <hat code>`, copying the hat code from the coldHat header. No header: `Hat's on · pasted`.
+1. `Hat's on · <hat code> · seal <seal>`, copying the hat code from the coldHat header and the seal from the page's last line. No header: `Hat's on · pasted`.
    Never make up a code.
 2. Ask for the funder's call or rubric, the deadline, and the word limits.
 

@@ -20,8 +20,8 @@ Read this part first; it says which other parts to put on.
 The first reply after you put the hat on tells them it worked. Write it in this order,
 then wait:
 
-1. `Hat's on · <hat code>`, copying the hat code exactly from the coldHat header at the
-   top of this page. If the page has no header, the hat was pasted in: write
+1. `Hat's on · <hat code> · seal <seal>`, copying the hat code exactly from the coldHat header
+   at the top of this page and the seal from its last line. If the page has no header, the hat was pasted in: write
    `Hat's on · pasted`. Never make up a code.
 2. One question. If the coldHat header lists facts past their check date, ask whether
    those are still true, naming each one. Otherwise ask what we are working on today.

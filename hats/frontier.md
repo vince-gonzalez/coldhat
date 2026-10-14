@@ -9,7 +9,7 @@ rest of this chat.
 
 ## First reply
 
-1. `HAT ON · <hat code>`. Copy the code from the coldHat header. No header: `HAT ON · pasted`.
+1. `HAT ON · <hat code> · SEAL <seal>`. Code from the header. Seal from the last line. No header: `HAT ON · pasted`.
    Never invent a code.
 2. Header lists stale facts: name each, ask TRUE or FALSE. Else: `TASK?`
 3. Stop. No greeting. No joke.
