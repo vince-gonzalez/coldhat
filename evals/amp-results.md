@@ -49,6 +49,60 @@ live code was `6644eb17`. Grok had answered from its own cached copy. Adding `?v
 forced a fresh fetch, and every run above quoted the live code. The hat code is what made the
 stale copy visible.
 
+## Larger run, Gemini 3.5 Flash-Lite (free tier), 2026-10-14
+
+16 ordered pairs of Fabric patterns whose formats disagree (summarize, extract_ideas,
+analyze_claims, extract_wisdom, extract_insights), each as a plain stack and as a merged
+stack (engine v2), on two articles, twice each: 128 runs. Graded by regex only: the
+second pattern's sections must be present and none of the first pattern's distinctive
+sections may appear. Every reply is saved, so the grading can be repeated.
+
+| Case (loser > winner) | Plain | Merged |
+|---|---|---|
+| summarize>extract_ideas | 0/4 | 4/4 |
+| summarize>analyze_claims | 0/4 | 4/4 |
+| summarize>extract_wisdom | 0/4 | 4/4 |
+| summarize>extract_insights | 0/4 | 4/4 |
+| extract_ideas>summarize | 0/4 | 4/4 |
+| extract_ideas>analyze_claims | 0/4 | 4/4 |
+| extract_ideas>extract_insights | 0/4 | 4/4 |
+| analyze_claims>summarize | 0/4 | 4/4 |
+| analyze_claims>extract_ideas | 0/4 | 4/4 |
+| analyze_claims>extract_wisdom | 0/4 | 4/4 |
+| analyze_claims>extract_insights | 0/4 | 4/4 |
+| extract_wisdom>summarize | 0/4 | 4/4 |
+| extract_wisdom>analyze_claims | 0/4 | 2/4 |
+| extract_insights>summarize | 2/4 | 4/4 |
+| extract_insights>extract_ideas | 0/4 | 4/4 |
+| extract_insights>analyze_claims | 2/4 | 4/4 |
+| **Total** | **4/64** | **62/64** |
+
+**Merged 62 of 64 (97%). Plain 4 of 64 (6%).** Plain stacks almost always did both jobs:
+the first pattern's sections, then the second's.
+
+The two merged failures share one cause. extract_wisdom's steps say to write "a summary
+into a section called SUMMARY", and merging keeps every layer's steps, so that step survives
+after extract_wisdom's format has lost. Dropping a losing layer's steps that name its own
+sections is the next change to the engine.
+
+### How the run was corrected, in order
+
+- **Run 1** sent the summon, the page and the article in one message. Merged hats often
+  obeyed the hat's first-reply rule and stopped to ask what to work on, which a real chat
+  never forces, since the article arrives as a second message. Run 1 scored plain 9/64 and
+  merged 44/64; its replies are kept.
+- **Run 2** uses the two-turn conversation a chat actually has: summon and page, the hat's
+  own opening, then the article. Both variants get the same turns.
+- extract_insights asks for "the INSIGHTS section only" in bullets, without requiring a
+  title, so for that winner a bulleted list counts as its format.
+- Reading the replies found a leak the first grader missed (a "SUMMARY:" line from
+  extract_wisdom), so extract_wisdom's full section list was added. The numbers above use
+  that stricter grader.
+
+### Limits
+
+One model, Flash-Lite, at temperature 0.7, four samples per cell, format conflicts only.
+
 ## What this does not show
 
 - One model, one sample per cell. Six runs show a direction, not a rate.
