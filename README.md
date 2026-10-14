@@ -25,6 +25,8 @@ those rules for the rest of the chat. **Live at [coldhat.f-keys.com](https://col
 
 ![Claude and Grok each put on the frontier hat from one typed line and answer with its hat code](https://raw.githubusercontent.com/vince-gonzalez/coldhat/main/docs/demo-frontier.gif)
 
+Every hat ends with a seal. If the assistant can't quote it, the hat was cut off, and it tells you.
+
 ## Addresses
 
 | You want to | Type this after `open sesame` |
