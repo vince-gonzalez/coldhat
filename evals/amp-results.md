@@ -1,5 +1,7 @@
 # Plain stacks against slot-merged stacks
 
+**Current result:** merged stacks followed the right format **64 of 64** times; plain stacks **4 of 64** (Gemini 3.5 Flash-Lite, 128 runs, after the step fix). The runs below are in the order they happened, including the earlier 62-of-64 run before that fix.
+
 Each case stacks two Fabric patterns whose output formats
 disagree. A plain stack (`a+b`) lays the second after the first and says the later layer
 wins. A merged stack (`amp/a+b`) reads both into slots and keeps one output format. A case
