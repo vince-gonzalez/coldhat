@@ -85,6 +85,21 @@ into a section called SUMMARY", and merging keeps every layer's steps, so that s
 after extract_wisdom's format has lost. Dropping a losing layer's steps that name its own
 sections is the next change to the engine.
 
+### After the step fix, same day
+
+The engine now drops a losing layer's steps that write into its own sections, and the
+receipt says how many. The whole merged column was run again (64 runs, same protocol, same
+strict grader); the plain column is unchanged.
+
+| | Followed the right format |
+|---|---|
+| Merged | **64 of 64** |
+| Plain | **4 of 64** |
+
+The four extract_wisdom > analyze_claims replies that had opened with extract_wisdom's
+"SUMMARY:" section now open with ARGUMENT SUMMARY. The earlier merged replies are kept
+beside the new ones.
+
 ### How the run was corrected, in order
 
 - **Run 1** sent the summon, the page and the article in one message. Merged hats often
