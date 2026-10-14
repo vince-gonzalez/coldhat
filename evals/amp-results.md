@@ -31,6 +31,24 @@ reply opened with the correct hat code.
 Every plain stack did both jobs, although its header says the later layer wins. Every
 merged stack did only the later job.
 
+## Engine v2, Grok (Fast), 2026-10-14
+
+v2 matches each line to a library of instruction atoms, says a shared atom once, resolves known
+conflicts in favor of the later layer, and writes a merge receipt into the hat. Same suite, same
+article, merged stacks only (plain stacks were measured above).
+
+| Case | Merged, v2 |
+|---|---|
+| summary-wins | **pass**: ONE SENTENCE SUMMARY, 10 MAIN POINTS, 5 TAKEAWAYS, numbered; nothing from extract_wisdom |
+| ideas-win | **pass**: IDEAS only, bulleted |
+| claims-win | **pass**: ARGUMENT SUMMARY through OVERALL ANALYSIS; no IDEAS |
+| **Total** | **3 of 3** |
+
+The first attempt quoted hat code `7d8d1268`, the code of the v1 page from the day before; the
+live code was `6644eb17`. Grok had answered from its own cached copy. Adding `?v=2` to the address
+forced a fresh fetch, and every run above quoted the live code. The hat code is what made the
+stale copy visible.
+
 ## What this does not show
 
 - One model, one sample per cell. Six runs show a direction, not a rate.
