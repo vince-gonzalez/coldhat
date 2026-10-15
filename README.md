@@ -36,6 +36,9 @@ Every hat ends with a seal. If the assistant can't quote it, the hat was cut off
 | Wear a [prompts.chat](https://prompts.chat) prompt | `coldhat.f-keys.com/prompts/linux-terminal` |
 | Stack up to three, later layers winning | `coldhat.f-keys.com/u/vince-gonzalez/editor+fabric/analyze_claims` |
 | Merge a stack by slot instead of piling it up | `coldhat.f-keys.com/amp/fabric/extract_ideas+fabric/analyze_claims` |
+| Keep rules no other layer can override | put them under `## Locked` in your hat |
+| Wear one exact version | `coldhat.f-keys.com/u/<user>/<hat>@<commit>` |
+| Check a reply wore the current hat | `coldhat.f-keys.com/verify?address=<hat address>` with the reply |
 
 Every reply starts with the hat mark and code, for example `🎩💨⛄🔬 Hat's on · b7d19023`:
 a top hat, a gust, Frosty, then one icon per layer.

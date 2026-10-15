@@ -1,6 +1,6 @@
 # Plain stacks against slot-merged stacks
 
-**Current result:** merged stacks followed the right format **64 of 64** times; plain stacks **4 of 64** (Gemini 3.5 Flash-Lite, 128 runs, after the step fix). The runs below are in the order they happened, including the earlier 62-of-64 run before that fix.
+**Current result:** on the engine now serving, merged stacks followed the right format **63 of 64** times and never leaked the losing format; plain stacks **4 of 64** (Gemini 3.5 Flash-Lite, 128 runs). The runs below are in the order they happened, including the earlier 62-of-64 run before that fix.
 
 Each case stacks two Fabric patterns whose output formats
 disagree. A plain stack (`a+b`) lays the second after the first and says the later layer
@@ -133,3 +133,10 @@ One model, Flash-Lite, at temperature 0.7, four samples per cell, format conflic
   The merged hat keeps every method, so an earlier layer's steps can still ask for its
   sections. Grok ignored them here; another model may not.
 
+## Current engine (locked rules, opposite-negation fix), 2026-10-14
+
+Merged column re-run on the engine now serving: **63 of 64**; plain unchanged at 4 of 64.
+No merged run leaked the losing format. The one miss (analyze_claims > extract_ideas,
+four-day-week, run 2) repeated its opening line and asked what to work on next instead of
+answering the article it had already received; its three sibling runs are clean. The
+step-fix engine's replies (64 of 64) are kept.
